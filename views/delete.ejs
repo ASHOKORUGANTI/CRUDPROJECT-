@@ -1,0 +1,136 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+  
+  <title>CarStationCreate</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  
+ 
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="hold-transition sidebar-mini">
+	
+        <div class="wrapper">
+            
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"> 
+                                               <i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/" class="nav-link">Home</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.navbar -->
+            
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+                <a href="/" class="brand-link">
+                  <img src="logo.png"
+                       alt="CS"
+                       class="brand-image img-circle elevation-3">
+                  <span class="brand-text font-weight-light">Car Station</span>
+                </a>
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Sidebar Menu -->
+  <nav class="mt-2">
+	<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+	  <li class="nav-item">
+		<a href="/create" class="nav-link">
+		  <i class="nav-icon far fa-circle text-info"></i>
+		  <p class="text">Add New Car data</p>
+		</a>
+	  </li>
+	  <li class="nav-item">
+		<a href="/updatestock" class="nav-link">
+		  <i class="nav-icon far fa-circle text-info"></i>
+		  <p class="text">Update Car stock</p>
+		</a>
+	  </li>
+    <li class="nav-item">
+      <a href="/removestock" class="nav-link">
+        <i class="nav-icon far fa-circle text-info"></i>
+        <p class="text">Remove Car stock</p>
+      </a>
+      </li>
+	  
+	</ul>
+</nav>
+<!-- /.sidebar-menu -->
+                
+                </div>
+                <!-- /.sidebar -->
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+                <section class="content-header">
+                    <h1>Delete Car Data</h1>
+                </section>
+                
+                <section class="content">
+                    <section class="content">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <!-- left column -->
+                            <div class="col-md-6">
+                              <!-- general form elements -->
+                              <div class="card card-primary">
+                                <div class="card-header">
+                                  <h3 class="card-title">Delete</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <form action="/delete" method="POST">
+                                  <div class="card-body">
+                                    <div class="form-group">
+                                        <label>Car Id:</label>
+                                        <input type="number" placeholder="Enter the Car Id" name="id"><br>
+                                    </div>
+                                  </div>
+                                  <!-- /.card-body -->
+                  
+                                  <div class="card-footer">
+                                    <button id="delete" class="btn btn-primary" onclick="myfunction()">Delete</button>
+
+                                    <a href="/" class="c2">Home Page</a>
+                                  </div>
+                                </form>
+                              </div>
+                </section>
+            </div>
+            
+        </div>
+        <script>
+          function myfunction(){
+            alert("Deleting car data");
+          }
+        </script>
+    </body>
+    <!-- <body>
+        <h2 class="c1"><u>Delete car data</u></h2>
+        <form action="/delete" method="POST">
+
+            <label>Car Id:</label>
+            <input type="text" placeholder="Enter the Car Id" name="id"><br><br>
+
+            <button id="/delete">Delete</button>
+        </form>
+
+        <a href="/" class="c2">Home Page</a>
+    </body> -->
+</html>
